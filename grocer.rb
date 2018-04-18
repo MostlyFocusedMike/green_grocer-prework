@@ -15,7 +15,6 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     name = coupon[:item]
     w_c = "#{name} W/COUPON"
-<<<<<<< HEAD
     if cart.keys.include?(name) && cart[name][:count] >= coupon[:num]
       cart[name][:count] -= coupon[:num]
       cart[w_c] ||= {}
@@ -23,15 +22,6 @@ def apply_coupons(cart, coupons)
       cart[w_c][:clearance] ||= cart[name][:clearance]
       cart[w_c][:count] ||= 0
       cart[w_c][:count] += 1
-=======
-    if cart.keys.include?(name) && cart.keys.include?(w_c) == false
-      n_coup = coupons.count(coupon) # number of coupons
-      cart[name][:count] -= n_coup * coupon[:num]
-      cart[w_c] = {}
-      cart[w_c][:price] = coupon[:cost]
-      cart[w_c][:clearance] = cart[name][:clearance]
-      cart[w_c][:count] = n_coup
->>>>>>> 3c602704d3836e4b053c457333f44dbdd9eaedfd
     end
   end
   return cart
