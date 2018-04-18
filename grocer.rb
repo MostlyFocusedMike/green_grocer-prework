@@ -39,11 +39,6 @@ def checkout(cart, coupons)
   return fin_cart > 100 ? fin_cart -= (fin_cart * 0.1) : fin_cart 
 end
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 3c602704d3836e4b053c457333f44dbdd9eaedfd
 def items
 	[
 		{"AVOCADO" => {:price => 3.00, :clearance => true}},
